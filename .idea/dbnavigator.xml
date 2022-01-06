@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -25,21 +25,25 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="d4ee3fc8-2529-4a26-b10d-a6d07430b88a">
+      <connection connection-id="a4c84de0-108c-41fd-9039-886c33352a2d">
         <schema name="information_schema" object-types="table, view, sequence, function, constraint, index, column, dataset trigger" />
+        <schema name="pg_catalog" object-types="table, view, sequence, function" />
+        <schema name="pg_toast" object-types="table, view, sequence, function" />
+        <schema name="public" object-types="table, view, sequence, function, constraint, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="d4ee3fc8-2529-4a26-b10d-a6d07430b88a">
-      <console name="books_db" type="STANDARD" schema="information_schema" session="Main" />
+    <connection id="a4c84de0-108c-41fd-9039-886c33352a2d">
+      <console name="book_db" type="STANDARD" schema="" session="Main" />
+      <console name="books_db" type="STANDARD" schema="information_schema" session="Main"><![CDATA[createuser -s -P superadmin]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="d4ee3fc8-2529-4a26-b10d-a6d07430b88a" />
+    <connection id="a4c84de0-108c-41fd-9039-886c33352a2d" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -70,10 +74,10 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="d4ee3fc8-2529-4a26-b10d-a6d07430b88a" active="true">
+      <connection id="a4c84de0-108c-41fd-9039-886c33352a2d" active="true">
         <database>
           <name value="books_db" />
-          <description value="" />
+          <description value="books_db" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
           <database-version value="14.1" />
