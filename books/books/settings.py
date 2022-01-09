@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_django',
+
     'store',
 ]
 
@@ -86,6 +88,10 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = (
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -136,4 +142,6 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.JSONParser',
     )
 }
+
+SOCIAL_AUTH_JSONFIELD_ENABLED = True
 
