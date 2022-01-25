@@ -26,9 +26,8 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="a4c84de0-108c-41fd-9039-886c33352a2d">
-        <schema name="information_schema" object-types="table, view, sequence, function, constraint, index, column, dataset trigger" />
-        <schema name="pg_catalog" object-types="table, view, sequence, function" />
-        <schema name="pg_toast" object-types="table, view, sequence, function" />
+        <schema name="information_schema" object-types="function" />
+        <schema name="pg_catalog" object-types="function" />
         <schema name="public" object-types="table, view, sequence, function, constraint, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
@@ -36,7 +35,8 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a4c84de0-108c-41fd-9039-886c33352a2d">
       <console name="book_db" type="STANDARD" schema="" session="Main" />
-      <console name="books_db" type="STANDARD" schema="information_schema" session="Main"><![CDATA[createuser -s -P superadmin]]></console>
+      <console name="books_db" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT * FROM public.auth_user
+ORDER BY id ASC]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
